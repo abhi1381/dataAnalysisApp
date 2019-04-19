@@ -1,0 +1,82 @@
+<div class="container">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+  <p class="mat-display-1">Number of Matches = {{filteredData}}</p>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- batting_score Column -->
+    <ng-container matColumnDef="batting_score">
+      <th mat-header-cell *matHeaderCellDef> batting_score </th>
+      <td mat-cell *matCellDef="let element"> {{element.batting_score}} </td>
+    </ng-container>
+
+    <!-- Wickets Column -->
+    <ng-container matColumnDef="wickets">
+      <th mat-header-cell *matHeaderCellDef> wickets </th>
+      <td mat-cell *matCellDef="let element"> {{element.wickets}} </td>
+    </ng-container>
+
+    <!-- runs_conceded Column -->
+    <ng-container matColumnDef="runs_conceded">
+      <th mat-header-cell *matHeaderCellDef> runs_conceded </th>
+      <td mat-cell *matCellDef="let element"> {{element.runs_conceded}} </td>
+    </ng-container>
+
+    <!-- catches column -->
+    <ng-container matColumnDef="catches">
+      <th mat-header-cell *matHeaderCellDef> catches </th>
+      <td mat-cell *matCellDef="let element"> {{element.catches}} </td>
+    </ng-container>
+
+    <!-- stumps columns -->
+    <ng-container matColumnDef="stumps">
+      <th mat-header-cell *matHeaderCellDef> stumps </th>
+      <td mat-cell *matCellDef="let element"> {{element.stumps}} </td>
+    </ng-container>
+
+    <!-- opposition -->
+    <ng-container matColumnDef="opposition">
+      <th mat-header-cell *matHeaderCellDef> opposition </th>
+      <td mat-cell *matCellDef="let element"> {{element.opposition}} </td>
+    </ng-container>
+
+    <!-- ground column -->
+    <ng-container matColumnDef="ground">
+      <th mat-header-cell *matHeaderCellDef> ground </th>
+      <td mat-cell *matCellDef="let element"> {{element.ground}} </td>
+    </ng-container>
+
+    <!-- date column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <!-- match_result -->
+    <ng-container matColumnDef="match_result">
+      <th mat-header-cell *matHeaderCellDef> match_result </th>
+      <td mat-cell *matCellDef="let element"> {{element.match_result}} </td>
+    </ng-container>
+
+    <!-- result_margin -->
+    <ng-container matColumnDef="result_margin">
+      <th mat-header-cell *matHeaderCellDef> result_margin </th>
+      <td mat-cell *matCellDef="let element"> {{element.result_margin}} </td>
+    </ng-container>
+
+    <!-- toss -->
+    <ng-container matColumnDef="toss">
+      <th mat-header-cell *matHeaderCellDef> toss </th>
+      <td mat-cell *matCellDef="let element"> {{element.toss}} </td>
+    </ng-container>
+
+    <!-- batting_innings -->
+    <ng-container matColumnDef="batting_innings">
+      <th mat-header-cell *matHeaderCellDef> batting_innings </th>
+      <td mat-cell *matCellDef="let element"> {{element.batting_innings}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
