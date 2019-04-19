@@ -1,5 +1,14 @@
 table {
   width: 100%;
+
+  th {
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    text-align: center;
+  }
+  td {
+    text-align: center;
+  }
 }
 
 .mat-form-field {
@@ -8,7 +17,13 @@ table {
 }
 
 .container {
-  margin: 1em;
+  margin: 0 auto;
   height: 95vh;
   overflow: auto;
+  width: 90vw;
+  p{
+    text-align: center;
+    font-size: 6vw;
+    padding-top: 40px;
+  }
 }

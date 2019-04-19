@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MatTableDataSource } from "@angular/material";
-import { DataService, CricketData } from "../data.service";
-// import {ELEMENT_DATA} from '../data.service';
+import { DataService} from "../data.service";
+
 
 
 
@@ -29,10 +29,6 @@ export class AnalysisComponent implements OnInit {
     "batting_innings"
   ];
 
-  
-
-
-  
   constructor(private data: DataService) {}
 
   ngOnInit() {
@@ -43,10 +39,9 @@ export class AnalysisComponent implements OnInit {
     });
   }
 
+  
+
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
-  
-
 }

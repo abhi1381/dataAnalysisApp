@@ -1,3 +1,14 @@
-<p>
-  conclusion works!
-</p>
+<div class="container">
+  <h1 class="mat-display-4">{{title}}</h1>
+  <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+    [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+  </canvas>
+
+  <div class="line">
+    <h1 class="mat-display-4">Line Chart</h1>
+    <p class="mat-display-4">value of Won = 1,Lost = 0, tied = 2, n/r = 3</p>
+    <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+      [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
+    </canvas>
+  </div>
+</div>

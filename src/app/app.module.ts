@@ -15,6 +15,7 @@ import {
   MatPaginatorModule,
   MatSortModule
 } from "@angular/material";
+import { ChartsModule } from 'ng2-charts';
 import { AnalysisComponent } from "./analysis/analysis.component";
 import { ConclusionComponent } from "./conclusion/conclusion.component";
 
@@ -32,7 +33,8 @@ import { ConclusionComponent } from "./conclusion/conclusion.component";
     MatInputModule,
     HttpClientModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
