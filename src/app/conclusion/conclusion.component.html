@@ -1,4 +1,7 @@
 <div class="container">
+  <!-- <div>
+    <button mat-raised-button (click)="openDialog()">Plot Range</button>
+  </div> -->
   <h1 class="mat-display-4">{{title}}</h1>
   <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
     [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
@@ -10,5 +13,19 @@
     <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
       [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
     </canvas>
+  </div>
+
+  <div class="c2">
+    <div>
+      <div>
+        <h1 class="mat-display-4">Bar Chart</h1>
+        <div style="display: block">
+          <canvas baseChart [datasets]="barChartData1" [labels]="barChartLabels1" [options]="barChartOptions1"
+            [legend]="barChartLegend1" [chartType]="barChartType1" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+        </div>
+        <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
+      </div>
+    </div>
   </div>
 </div>
