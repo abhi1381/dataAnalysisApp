@@ -1,7 +1,4 @@
 <div class="container">
-  <!-- <div>
-    <button mat-raised-button (click)="openDialog()">Plot Range</button>
-  </div> -->
   <h1 class="mat-display-4">{{title}}</h1>
   <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
     [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
@@ -27,5 +24,10 @@
         <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
       </div>
     </div>
+  </div>
+
+  <div class="result">
+    <blockquote class="mat-display-4">"Based On the Observations and Analysis,It is Clear that Sachin Tendulkar is the
+      Greatest Cricketer of All Time."</blockquote>
   </div>
 </div>

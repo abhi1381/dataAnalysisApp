@@ -1,10 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import {
-  MatDialog,
-  MatDialogConfig,
-  MatDialogRef,
-  MAT_DIALOG_DATA
-} from "@angular/material";
+  MatDialog} from "@angular/material";
 import { ChartService } from "../chart.service";
 
 import { ChartOptions, ChartType, ChartDataSets } from "chart.js";
@@ -97,7 +93,7 @@ export class ConclusionComponent implements OnInit {
     this.barChartType1 = this.barChartType1 === "bar" ? "line" : "bar";
   }
 
-  constructor(private chart: ChartService, private dialog: MatDialog) {}
+  constructor(private chart: ChartService) {}
 
   ngOnInit() {
     let plotrangeX: number, plotrangeY: number;
